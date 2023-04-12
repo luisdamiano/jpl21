@@ -40,9 +40,6 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 
-% Make it nicer
-\usepackage{emoji}
-
 % References
 %\usepackage[natbib=true]{biblatex}
 %\addbibresource{references.bib}
@@ -82,11 +79,11 @@
       \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{section
           in head/foot}%
         \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
       \end{beamercolorbox}}%
     \vskip0pt%
   }
-  
+
   %% Hide navigation bar
   \beamertemplatenavigationsymbolsempty{}
 
@@ -99,7 +96,7 @@
 
   %% Title page
   \setbeamercolor*{title}{fg=ISUcardinal}
-  
+
   %% Frame
   \setbeamercolor{frametitle}{fg=white, bg=ISUcardinal}
 
@@ -107,13 +104,13 @@
   \setbeamertemplate{itemize item}[square]
   \setbeamertemplate{itemize subitem}[triangle]
   \setbeamertemplate{itemize subsubitem}[triangle]
-  
+
   \setbeamercolor{itemize item}{fg=ISUcardinal}
   \setbeamercolor{itemize subitem}{fg=ISUcardinal}
   \setbeamercolor{itemize subsubitem}{fg=ISUcardinal}
 
   \setbeamercolor{description item}{fg=ISUcardinal}
-  
+
   %\setlength{\leftmargini}{0pt}
   \setlength{\leftmarginii}{10pt}
 }
@@ -144,7 +141,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
 % Title page
 \begin{frame}
   \titlepage{}
-  % \vspace{0.1in}  
+  % \vspace{0.1in}
   {
     \tiny{
       Funded, in part, by
@@ -215,7 +212,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
     d_f(X_i, X_j)
     &= \int_{\mathcal{T}}
       \omega(t)
-      {\left(X_i(t) - X_j(t) \right)}^2 dt    
+      {\left(X_i(t) - X_j(t) \right)}^2 dt
       }
   \end{align}
 
@@ -230,7 +227,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
       $\omega(t): \mathcal{T} \to (0, \infty)$
     }
   }
-  
+
   \begin{description}
   \item[Multiple inputs]<3-> e.g., correlation product
   \item[Complex index spaces]<4-> e.g., spatio-temporal structures
@@ -248,7 +245,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
 %   \end{figure}
 %   \begin{align*}
 %     \omega(t)
-%     &= \text{exp}\left\{-(t - \tau) \lambda \kappa^s s\right\} \\    
+%     &= \text{exp}\left\{-(t - \tau) \lambda \kappa^s s\right\} \\
 %     s
 %     &= \text{sign}(t - \tau) \\
 %     \lambda &> 0 \\
@@ -280,7 +277,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
         \left(t_{k} - t_{k - 1}\right)
         \frac{
         \Delta_{i, j, k} +
-        \Delta_{i, j, k - 1} 
+        \Delta_{i, j, k - 1}
         }{2}
         } \\
       \Delta_{i, j, k} =
@@ -312,7 +309,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
 
 \begin{frame}
   \frametitle{Weight function posterior samples}
-  
+
   \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{fit-full-posterior-weights-selected.png}
@@ -321,7 +318,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
 
 \begin{frame}
   \frametitle{Cross-validation overview}
-  
+
   \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{xvalidation-actual-predicted-scatterplot-selected}
@@ -332,7 +329,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
   \frametitle{Learnings from this lil' experiment}
 
   \small
- 
+
   \begin{columns}[t]
     \begin{column}{.45\textwidth}
       Vector input GP
@@ -346,8 +343,8 @@ Virtual Breakout Meeting}\\ October 14, 2021}
       \item[-]<3-> Output-agnostic FPCA decisions%: smoother, bases, knots
       \item[-]<3-> Potential loss of information if not retaining all
         components
-      \item[\emoji{monocle-face}]<4-> Interpretation
-      \item[\emoji{worried-face}]<5-> Parameter space scales with
+      \item[-]<4-> Interpretation
+      \item[-]<5-> Parameter space scales with
         functional input resolution
       \end{itemize}
     \end{column}
@@ -360,7 +357,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
       \item[+]<3-> Domain-specific knowledge
       \item[+]<4-> Interpretation
       \item[+]<5-> Parsimony
-      \item[\emoji{winking-face}]<6-> \alert{\textbf{Complex index spaces}},
+      \item[+]<6-> \alert{\textbf{Complex index spaces}},
         e.g., spatio-temporal inputs
       \end{itemize}
       \vspace{0.25cm}
@@ -370,7 +367,7 @@ Virtual Breakout Meeting}\\ October 14, 2021}
       \end{itemize}
     \end{column}
   \end{columns}
-  
+
 \end{frame}
 
 % References -------------------------------------------------------------------
