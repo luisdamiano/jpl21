@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{tikz}
+%\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+Example
+
+\definecolor{bright-spark}{RGB}{255, 195, 59}
+\tikzstyle{nice-rectangle} = [rectangle, rounded corners, minimum
+width=3cm, minimum height=1cm, text centered, draw=red,
+fill=bright-spark, font=\sffamily]
+
+\begin{tikzpicture}
+  % We start by placing the blocks
+  \node (input)  [nice-rectangle] {Functional input};
+  \node (output) [nice-rectangle, right=of input] {Scalar output};
+  \draw [->] (input) [above] -- node {$f$} (output);
+\end{tikzpicture}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
